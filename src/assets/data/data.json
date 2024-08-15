@@ -1,0 +1,49 @@
+{
+  "galleryItems": [
+    {
+      "headline": "When darkness overspreads my eyes",
+      "subheadline": "by JOHANN WOLFGANG VON GOETHE",
+      "content": "When, while the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees...",
+      "imageUrl": "https://placehold.co/600x400",
+      "imageAlt": "A beautiful valley",
+      "caption": "A serene view of the valley.",
+      "headlineType": "hl3"
+    },
+    {
+      "headline": "Give people courage",
+      "subheadline": "The crowd seemed to grow",
+      "content": "The sunset faded to twilight before anything further happened. The crowd far away on the left, towards Woking, seemed to grow...",
+      "imageUrl": "https://placehold.co/600x400",
+      "imageAlt": "A crowd gathering",
+      "caption": "A crowd gathering as the sun sets.",
+      "headlineType": "hl5"
+    },
+    {
+      "headline": "May the Force be with you",
+      "subheadline": "Let go your conscious self and act on instinct",
+      "content": "Partially, but it also obeys your commands. Hey, Luke! May the Force be with you. I have traced the Rebel spies to her...",
+      "imageUrl": "https://placehold.co/600x400",
+      "imageAlt": "A scene from space",
+      "caption": "\"This time, let go your conscious self and act on instinct.\"",
+      "headlineType": "hl1"
+    },
+    {
+      "headline": "The buzz of the little world",
+      "subheadline": "A thousand unknown plants",
+      "content": "I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now...",
+      "imageUrl": "https://placehold.co/600x400",
+      "imageAlt": "Buzz of the little world",
+      "caption": "A close-up view of nature's buzz.",
+      "headlineType": "hl3"
+    },
+    {
+      "headline": "It wasn't a dream",
+      "subheadline": "by FRANZ KAFKA",
+      "content": "One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin...",
+      "imageUrl": "https://placehold.co/600x400",
+      "imageAlt": "A surreal scene",
+      "caption": "Kafka's world brought to life.",
+      "headlineType": "hl1"
+    }
+  ]
+}

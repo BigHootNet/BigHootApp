@@ -1,0 +1,21 @@
+#bigCursor {             
+    position: fixed;             
+    width: 200px;             
+    height: 200px;             
+    background: rgb(255, 255, 255);             
+    border-radius: 50%;             
+    top: var(--y, 0);             
+    left: var(--x, 0);             
+    transform: translate(-50%, -50%);             
+    mix-blend-mode: difference;             
+    pointer-events: none;             
+    transition-duration: 0ms;
+    transition-timing-function: ease-out;             
+    z-index: 99998;       
+}                  
+
+#bigCursor.bigCursorState {             
+    width: 160px;
+    height: 160px;
+    background: rgb(0, 0, 0);
+}     
