@@ -29,6 +29,9 @@ const Home: React.FC = () => {
       </section>
 
       <section id="projects" className="projects-page" data-bgcolor="#C9C9C9" data-textcolor="#1F1D1E">
+      <div className="section-title">
+            <span>/projects</span>
+      </div>
         <Projects />
       </section>
 

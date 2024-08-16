@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'Autography';
+    src: url('../../assets/fonts/Thesignature.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+.tooltip {
+    position: absolute;
+    width: 25vw;
+    bottom: 15%;
+    left: 15%;
+    color: #1F1D1E;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 3.5vw;
+    rotate:calc(-12deg);
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+    font-family: 'Autography', sans-serif;
+    z-index: 9999;
+  
+    &.visible {
+      opacity: 1;
+    }
+  }
+  

@@ -55,7 +55,7 @@ const HorizontalScroll: React.FC<HorizontalScrollProps> = ({ children }) => {
               end: `+=${totalWidth}`,
               scrub: true,
               pin: true,
-              markers: true,
+              markers: false,
               invalidateOnRefresh: true,
             },
           });
