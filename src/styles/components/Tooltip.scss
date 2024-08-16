@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'Autography';
+    font-family: 'Thesignature';
     src: url('../../assets/fonts/Thesignature.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
@@ -19,7 +19,7 @@
     opacity: 0;
     transition: opacity 0.5s ease;
     pointer-events: none;
-    font-family: 'Autography', sans-serif;
+    font-family: 'Thesignature', sans-serif;
     z-index: 9999;
   
     &.visible {
