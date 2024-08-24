@@ -1,8 +1,33 @@
 .contact-page {
-    height: 100vh;
-    width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  .text-container {
+    font-size: 3rem;
+    font-family: 'Arial, sans-serif';
+    color: #333;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    position:relative;
   }
+
+  .animated-text {
+    opacity: 0;
+    font-size: 5vw;
+    width: 100%;
+    text-align: center;
+  }
+  a {
+    opacity: 0;
+    font-size: 5vw;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+  }
+}
