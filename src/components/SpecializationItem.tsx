@@ -8,10 +8,10 @@ interface SpecializationItemProps {
 
 const SpecializationItem: React.FC<SpecializationItemProps> = ({ title, subTitle }) => {
   return (
-    <h1 className="text">
+    <h3 className="text">
       {title}
       <span>{subTitle}</span>
-    </h1>
+    </h3>
   );
 };
 

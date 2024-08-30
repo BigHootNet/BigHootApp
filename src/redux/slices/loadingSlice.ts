@@ -1,18 +1,23 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-const initialState = {
+interface LoadingState {
+  isLoading: boolean;
+  isLandingFinished: boolean;
+}
+
+const initialState: LoadingState = {
   isLoading: false,
-  isLandingFinished: false, // Initialisation de isLandingFinished
+  isLandingFinished: false,
 };
 
 const loadingSlice = createSlice({
   name: 'loading',
   initialState,
   reducers: {
-    setLoading(state, action) {
+    setLoading: (state, action: PayloadAction<boolean>) => {
       state.isLoading = action.payload;
     },
-    setLandingFinished(state, action) {
+    setLandingFinished: (state, action: PayloadAction<boolean>) => {
       state.isLandingFinished = action.payload;
     },
   },

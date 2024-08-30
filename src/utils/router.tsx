@@ -5,21 +5,17 @@ import Home from '../pages/Home';
 import Landing from '../pages/Landing';
 import CustomCursor from '../components/CustomCursor';
 import ScrollToSection from '../utils/scrollToSection';
-import SmoothScroll from '../components/SmoothScroll';
 import LoadingAnimation from '../components/LoadingAnimation';
 import { useAppSelector } from '../redux/hooks';
 
-// Type pour accepter des enfants (children) dans Layout
 interface LayoutProps {
-  children: ReactNode;  // ReactNode accepte tout type de contenu JSX
+  children: ReactNode;
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => (
   <>
     <CustomCursor />
-    <SmoothScroll>
-      <main>{children}</main>
-    </SmoothScroll>
+    <main>{children}</main>
   </>
 );
 

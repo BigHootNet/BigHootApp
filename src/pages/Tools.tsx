@@ -36,7 +36,7 @@ const Tools: React.FC = () => {
       <div className="icon_holder">
         <i
           className="devicon-typescript-plain TSi"
-          onMouseOver={() => handleMouseOver('TypeScript, make JS even more wonderful', 'TSi-hover')}
+          onMouseOver={() => handleMouseOver('TypeScript, makes JS even more wonderful', 'TSi-hover')}
           onMouseOut={handleMouseOut}
         ></i>
         <i
@@ -61,7 +61,7 @@ const Tools: React.FC = () => {
         ></i>
         <i
           className="devicon-premierepro-plain PPi"
-          onMouseOver={() => handleMouseOver('Premiere Pro, cuz I\'m wish version of Spielberg', 'PPi-hover')}
+          onMouseOver={() => handleMouseOver('Premiere Pro, cuz I\'m a Wish version of Spielberg', 'PPi-hover')}
           onMouseOut={handleMouseOut}
         ></i>
       </div>

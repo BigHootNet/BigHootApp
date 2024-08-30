@@ -1,29 +1,9 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import SpecializationItem from '../components/SpecializationItem';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import '../styles/pages/Specialization.scss';
 import img from '../assets/img/field-logo.png';
 
-gsap.registerPlugin(ScrollTrigger);
-
 const Specialization: React.FC = () => {
-  useEffect(() => {
-    const textElements = gsap.utils.toArray('.text') as HTMLElement[];
-
-    textElements.forEach((text) => {
-      gsap.to(text, {
-        backgroundSize: '100%',
-        ease: 'none',
-        scrollTrigger: {
-          trigger: text,
-          start: 'center 80%',
-          end: 'center 20%',
-          scrub: true,
-        },
-      });
-    });
-  }, []);
 
   return (
     <>

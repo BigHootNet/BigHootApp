@@ -2,12 +2,16 @@ import React, { useRef, useEffect } from 'react';
 import * as THREE from 'three';
 import { GLTFLoader, GLTF } from 'three/examples/jsm/loaders/GLTFLoader';
 import modelPath from '../assets/models/oak.glb';
+import useIsMobile from '../hooks/useIsMobile'; // Import du hook personnalisé
 
 const TreeModel: React.FC = () => {
   const mountRef = useRef<HTMLDivElement>(null);
   const rendererRef = useRef<THREE.WebGLRenderer | null>(null);
+  const isMobile = useIsMobile(); // Utilisation du hook pour détecter si l'utilisateur est sur mobile
 
   useEffect(() => {
+    if (isMobile) return; // Ne pas charger le modèle si on est sur mobile
+
     const currentMount = mountRef.current;
     if (!currentMount) return;
 
@@ -27,7 +31,20 @@ const TreeModel: React.FC = () => {
       window.removeEventListener('resize', handleResize);
       cleanup(renderer, currentMount);
     };
-  }, []);
+  }, [isMobile]);
+
+  if (isMobile) {
+    return (
+      <>
+        <div className="section-title">
+          <span>/about</span>
+        </div>
+        <div className="hero-content">
+          <span>I'm a french dude who spent too much time looking for smooth, interactive and sick designs.</span>
+        </div>
+      </>
+    );
+  }
 
   return (
     <>

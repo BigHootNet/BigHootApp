@@ -1,13 +1,14 @@
 import { configureStore } from '@reduxjs/toolkit';
-import loadingReducer from './slices/loadingSlice';
+import contentReducer from './slices/contentSlice';
+import loadingReducer from './slices/loadingSlice'; // Import du loadingSlice
 
 const store = configureStore({
   reducer: {
-    loading: loadingReducer,
+    content: contentReducer,    // Réducteur pour le contenu
+    loading: loadingReducer,    // Réducteur pour l'état de chargement
   },
 });
 
-// Export des types RootState et AppDispatch
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
 

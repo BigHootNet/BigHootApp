@@ -1,8 +1,13 @@
 import React, { useEffect } from 'react';
 import '../styles/components/CustomCursor.scss';
+import useIsMobile from '../hooks/useIsMobile'; // Import du hook personnalisé
 
 const CustomCursor: React.FC = () => {
+  const isMobile = useIsMobile(); // Utilisation du hook pour détecter si l'utilisateur est sur mobile
+
   useEffect(() => {
+    if (isMobile) return; // Ne pas initialiser le curseur personnalisé sur mobile
+
     function createCustomCursor() {
       let cursor = document.getElementById('bigCursor');
 
@@ -25,7 +30,7 @@ const CustomCursor: React.FC = () => {
     }
 
     createCustomCursor();
-  }, []);
+  }, [isMobile]);
 
   return null;
 };
