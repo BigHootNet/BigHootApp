@@ -26,7 +26,7 @@ export const useSectionColorChange = () => {
             gsap.to(document.body, {
               backgroundColor: bgColor,
               color: textColor,
-              duration: 1,
+              duration: .5,
               ease: 'power2.inOut',
               overwrite: 'auto',
             });
@@ -39,16 +39,16 @@ export const useSectionColorChange = () => {
             gsap.to(document.body, {
               backgroundColor: prevBgColor,
               color: prevTextColor,
-              duration: 1,
+              duration: .5,
               ease: 'power2.inOut',
               overwrite: 'auto',
             });
           }
         },
-        markers: true, 
+        markers: false, 
+        refreshPriority: 2,
+        preventOverlaps: true,
       });
     });
-
-    ScrollTrigger.refresh();
   });
 };

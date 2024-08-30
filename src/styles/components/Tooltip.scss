@@ -1,29 +1,52 @@
 @font-face {
-    font-family: 'Thesignature';
-    src: url('../../assets/fonts/Thesignature.ttf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-  }
+  font-family: 'Thesignature';
+  src: url('../../assets/fonts/Thesignature.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
 
+/* Mobile First - Styles par défaut pour les mobiles */
 .tooltip {
-    position: absolute;
-    width: 25vw;
-    bottom: 15%;
-    left: 15%;
-    color: #1F1D1E;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 3.5vw;
-    rotate:calc(-12deg);
-    z-index: 10;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    pointer-events: none;
-    font-family: 'Thesignature', sans-serif;
-    z-index: 9999;
-  
-    &.visible {
-      opacity: 1;
-    }
+  position: absolute;
+  width: 100%; /* Ajustement de la largeur pour les mobiles */
+  top: 40%; /* Ajustement de la position pour les mobiles */
+  left: 0; /* Ajustement de la position pour les mobiles */
+  color: #1F1D1E;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 13vw; /* Taille de police plus grande pour les petits écrans */
+  rotate: calc(-8deg); /* Rotation moins prononcée pour les petits écrans */
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+  font-family: 'Thesignature', sans-serif;
+  z-index: 9999;
+}
+
+.tooltip.visible {
+  opacity: 1;
+}
+
+/* Tablet view */
+@media (min-width: 768px) {
+  .tooltip {
+    width: 60vw; /* Ajustement de la largeur pour les tablettes */
+    bottom: 12%; /* Ajustement de la position pour les tablettes */
+    left: 15%; /* Ajustement de la position pour les tablettes */
+    font-size: 4vw; /* Ajustement de la taille de police pour les tablettes */
+    rotate: calc(-10deg); /* Rotation légèrement plus prononcée pour les tablettes */
   }
-  
+}
+
+/* Desktop view */
+@media (min-width: 1280px) {
+  .tooltip {
+    width: 25vw;
+    bottom: 20%;
+    left: 10%;
+    top:auto;
+    font-size: 3.5vw;
+    rotate: calc(-12deg);
+  }
+}

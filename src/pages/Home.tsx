@@ -12,6 +12,7 @@ import { useSectionColorChange } from '../hooks/useSectionColorChange';
 const Home: React.FC = () => {
   useSmoothScroll();
   useSectionColorChange();
+  console.log('%c You\'re not supposed to see this... Or maybe you are? Well, huh... Hi I guess ? Don\'t pay attention to the slices of pizza and World of Warcraft rolling, it\'s for research purpose of course !! *kof*kof*... Also, 42 is the answer you\'re looking for.', 'background: #222; color: #bada55')
 
   return (
     <div className="app">

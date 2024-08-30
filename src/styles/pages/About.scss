@@ -1,18 +1,46 @@
+/* Mobile First - Styles par défaut pour les mobiles */
 .about-page {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.hero-content {
+  position: absolute;
+  text-align: center;
+  font-size: 3.2rem; /* Taille ajustée pour les mobiles */
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  width: 90%;
+  top: 20%;
+  left: 5%;
+  right: 5%;
+}
+
+/* Tablet view */
+@media (min-width: 768px) {
+  .hero-content {
+    font-size: 2.8vw; /* Taille ajustée pour les tablettes */
+    width: 80%;
+    top: 22%;
+    left: 5%;
+    right: 5%;
+  }
+}
+
+/* Desktop view */
+@media (min-width: 1280px) {
+  .about-page {
     position: relative;
     overflow: hidden;
-  
-    .hero-content {
-      position: absolute;
-      text-align: center;
-      font-size: 3.6vw;
-      font-family: 'Roboto', sans-serif;
-      font-weight: 900;
-      width: 60%;
-      text-align: start;
-      top: 25%;
-      left: 2%;
-      right: 7%;
-    }
   }
-  
+
+  .hero-content {
+    font-size: 3.6vw;
+    width: 60%;
+    text-align: start;
+    top: 25%;
+    left: 2%;
+    right: 7%;
+  }
+}

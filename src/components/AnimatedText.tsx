@@ -1,37 +1,18 @@
-import React, { useRef, useEffect } from 'react';
-import anime from 'animejs';
+import React from 'react';
+import '../styles/components/AnimatedText.scss'; // Créez ce fichier pour inclure les styles
 
-interface AnimatedTextProps {
-  text: string;
-  isLink?: boolean;
-  href?: string;
-  delay: number;
-  isVisible: boolean;
-}
-
-const AnimatedText: React.FC<AnimatedTextProps> = ({ text, isLink = false, href = '', delay, isVisible }) => {
-  const textRef = useRef<HTMLDivElement | null>(null);
-
-  useEffect(() => {
-    if (isVisible && textRef.current) {
-      anime({
-        targets: textRef.current,
-        translateY: [-50, 0],
-        opacity: [0, 1],
-        easing: 'easeOutExpo',
-        duration: 1000,
-        delay: delay,
-      });
-    }
-  }, [isVisible, delay]);
-
-  return isLink ? (
-    <a href={href} className="animated-text" ref={textRef as React.RefObject<HTMLAnchorElement>}>
-      {text}
-    </a>
-  ) : (
-    <div className="animated-text" ref={textRef}>
-      {text}
+const AnimatedText: React.FC = () => {
+  return (
+    <div className="animated-text-container">
+      <p className="animated-text-static">Wanna</p>
+      <b className="animated-text-wrapper">
+        <span className="animated-text">
+          contact<br />
+          hire<br />
+          date
+        </span>
+      </b>
+      <p className="animated-text-static">me?</p>
     </div>
   );
 };

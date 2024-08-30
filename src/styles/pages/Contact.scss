@@ -1,33 +1,95 @@
+/* Mobile First - Styles par défaut pour les mobiles */
 .contact-page {
+  height: 100vh;
+  width: 100%;
   position: relative;
+}
+
+.text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  font-size: 1.5rem; /* Taille ajustée pour les mobiles */
+  font-family: 'Arial, sans-serif';
+  color: #333;
+  flex-wrap: wrap;
   justify-content: center;
-  height: 100vh;
+  padding: 0 20px;
+}
 
+.contact-page a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin-top: 5vh;
+  font-size: 1.1rem; /* Taille ajustée pour les mobiles */
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  color: #1F1D1E;
+}
+
+.email-link {
+  font-family: 'heavitas', sans-serif;
+  background: url('../../assets/img/mailbkg.gif') center center no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: cover;
+  font-size: 1.5rem; /* Taille ajustée pour les mobiles */
+  letter-spacing: 2px; /* Taille ajustée pour les mobiles */
+  display: inline-block;
+  margin-top: -1rem;
+  text-decoration: none;
+}
+
+.email-link:hover {
+  text-decoration: underline;
+}
+
+/* Tablet view */
+@media (min-width: 768px) {
   .text-container {
-    font-size: 3rem;
-    font-family: 'Arial, sans-serif';
-    color: #333;
+    font-size: 2rem; /* Taille ajustée pour les tablettes */
+  }
+
+  .contact-page a {
+    font-size: 2.5rem; /* Taille ajustée pour les tablettes */
+    top: 58%;
+  }
+
+  .email-link {
+    font-size: 2rem; /* Taille ajustée pour les tablettes */
+    letter-spacing: 3px; /* Taille ajustée pour les tablettes */
+  }
+}
+
+/* Desktop view */
+@media (min-width: 1280px) {
+  .contact-page {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
   }
 
-  .animated-text {
-    opacity: 0;
-    font-size: 5vw;
-    width: 100%;
-    text-align: center;
+  .text-container {
+    font-size: 3rem;
   }
-  a {
-    opacity: 0;
-    font-size: 5vw;
-    width: 100%;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    color: black;
+
+  .contact-page a {
+    font-size: 2vw;
+    margin-top: -2vh;
+  }
+
+  .email-link {
+    font-size: 2vw;
+    letter-spacing: 5px;
   }
 }

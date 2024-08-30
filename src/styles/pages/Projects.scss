@@ -1,8 +1,31 @@
 .projects-page {
-  height: 100vh; // Assurez-vous que la section occupe toute la hauteur de la vue
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  min-height: 450vh;
   position: relative;
+  padding-top: 7vh;
+  
+}
+
+.projects-page .section-title {
+  top: 0;
+}
+
+
+/* Tablet view */
+@media (min-width: 768px) {
+  .projects-page {
+    padding-top: 0vh;
+    height: 100vh;
+    max-height: max-content;
+  }
+}
+
+/* Desktop view */
+@media (min-width: 1280px) {
+  .projects-page {
+    display: flex;
+    min-height: auto;
+    justify-content: center;
+    align-items: center;
+  }
 }
